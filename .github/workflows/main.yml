@@ -1,0 +1,14 @@
+name: Hello World
+on: [push]
+jobs:
+  Hello-World-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World!"
+      - run: which docker
+      - run: docker --version
+      - run: docker ps
+      - run: curl localhost
+    services:
+      nginx:
+        image: public.ecr.aws/nginx/nginx:latest

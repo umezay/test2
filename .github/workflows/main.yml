@@ -12,3 +12,5 @@ jobs:
     services:
       nginx:
         image: public.ecr.aws/nginx/nginx:latest
+        ports:
+          - 80:80
